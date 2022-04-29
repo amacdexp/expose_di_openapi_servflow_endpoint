@@ -1,0 +1,13 @@
+--- 
+applications:
+- name: expose-di-endpoint
+  #random-route: true
+  path: app
+  memory: 128M
+
+  services:
+  #- destination-service
+  #- xsuaa-service
+  #- connectivity-service
+
+
