@@ -16,7 +16,7 @@ export default (req, res, next) => {
     } catch (error) {
         return res.status(401).send({
             ok: false,
-            error: "Token expired"
+            error: "Access denied. Token Invalid or Expired"
         });
     }
 
