@@ -10,38 +10,39 @@ https://www.youtube.com/watch?v=Tw5LupcpKS4&t=314s
 
 # Initial setup
 
-git clone https://github.com/amacdexp/expose_di_openapi_servflow_endpoint.git
+    git clone https://github.com/amacdexp/expose_di_openapi_servflow_endpoint.git
 
-cd app 
-npm install 
+    cd app 
 
-cd .. 
+    npm install 
+
+    cd .. 
 
 
 # Change list of valid 'users' and 'tokenValidity' : 
 
-app/routes/auth.js
+    app/routes/auth.js
 
-NOTE: To generate encrypted password run 'node app/generatePassword.js <newpassword>'
+    NOTE: To generate encrypted password run 'node app/generatePassword.js <newpassword>'
 
-NOTE2:  To better secure users and avoid  could be validated against XSUAA service  or add in a CF User provided service
+    NOTE2:  To better secure users and avoid  could be validated against XSUAA service  or add in a CF User provided service
 
 
 
 # Change DI endpoint (DI_API_SERVICE_URL) and DI password (DI_BASIC_USERID_PASSWORD) in:   
-app/diProxy.js
+    app/diProxy.js
 
-NOTE:  To better secure the DI enpoint and Password  could be stored in a DESTINATION service or added in a CF User provided service
+    NOTE:  To better secure the DI enpoint and Password  could be stored in a DESTINATION service or added in a CF User provided service
 
 
 
 
 # Deploy App 
 
-cf api <SAP BTP CF API ENDPOINT>
-cf login
+    cf api <SAP BTP CF API ENDPOINT>
+    cf login
 
-cf push
+    cf push
 
 
 
